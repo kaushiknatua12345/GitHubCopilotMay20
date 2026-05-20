@@ -102,7 +102,7 @@ export default function Welcome() {
                 {/* Logo 1 - Cat Cafe */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <path d="M30 60 C 30 40, 70 40, 70 60" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <circle cx="35" cy="35" r="7" fill="currentColor"/>
                       <circle cx="65" cy="35" r="7" fill="currentColor"/>
@@ -116,7 +116,7 @@ export default function Welcome() {
                 {/* Logo 2 - Paw Tech */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <path d="M40 40 L60 40" stroke="currentColor" strokeWidth="2"/>
                       <path d="M40 60 L60 60" stroke="currentColor" strokeWidth="2"/>
@@ -132,7 +132,7 @@ export default function Welcome() {
                 {/* Logo 3 - Feline Innovations */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <path d="M25 50 Q 50 20, 75 50" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <path d="M25 70 Q 50 40, 75 70" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <circle cx="30" cy="30" r="5" fill="currentColor"/>
@@ -145,7 +145,7 @@ export default function Welcome() {
                 {/* Logo 4 - Cat Health AI */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <path d="M30 30 L70 30 L70 70 L30 70 Z" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <path d="M50 20 L50 80" stroke="currentColor" strokeWidth="2"/>
                       <path d="M20 50 L80 50" stroke="currentColor" strokeWidth="2"/>
@@ -159,7 +159,7 @@ export default function Welcome() {
                 {/* Logo 5 - Purr Tech */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <circle cx="50" cy="40" r="15" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <path d="M35 55 L25 80" stroke="currentColor" strokeWidth="3"/>
                       <path d="M65 55 L75 80" stroke="currentColor" strokeWidth="3"/>
@@ -175,7 +175,7 @@ export default function Welcome() {
                 {/* Logo 6 - Whisker Data */}
                 <div className="flex flex-col items-center justify-center text-center px-4">
                   <div className="flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(118,184,82,0.4)] group-hover:scale-110 mb-2">
-                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }}>
+                    <svg viewBox="0 0 100 100" className="w-24 h-24 text-gray-500 group-hover:text-primary transition-colors duration-300" style={{ filter: 'url(#green-glow)' }} aria-hidden="true">
                       <path d="M30 70 Q 50 40, 70 70" fill="none" stroke="currentColor" strokeWidth="3"/>
                       <path d="M20 60 L80 60" stroke="currentColor" strokeWidth="2"/>
                       <path d="M20 50 L80 50" stroke="currentColor" strokeWidth="2"/>

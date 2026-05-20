@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "admin": "Admin",
+    "manageProducts": "Gérer les produits",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "welcome": "Bienvenue !",
+    "cart": "Panier"
+  },
+  "hero": {
+    "badge": "Propulsé par l'IA avancée",
+    "title1": "Technologie féline intelligente.",
+    "title2": "Purrsonnalisée.",
+    "description": "OctoCAT Supply apporte une technologie d'IA de pointe pour améliorer la vie de votre chat. Nos produits intelligents haut de gamme apprennent du comportement de votre ami félin pour offrir des expériences personnalisées, des informations sur la santé et un divertissement de premier ordre.",
+    "exploreProducts": "Explorer les produits",
+    "trustedBy": "Approuvé par les amoureux des chats partout"
+  },
+  "about": {
+    "title": "À propos d'OctoCAT Supply",
+    "intro": "Bienvenue chez OctoCAT Supply, votre destination de choix pour les produits intelligents alimentés par l'IA, conçus spécifiquement pour vos compagnons félins. Nos innovations technologiques pour chats de pointe réunissent les dernières avancées en intelligence artificielle, technologie de capteurs et design adapté aux animaux pour renforcer le lien entre vous et votre chat.",
+    "missionTitle": "Notre Miaou-ssion",
+    "missionText": "Révolutionner la façon dont les chats et les humains interagissent grâce à des produits soigneusement conçus et améliorés par l'IA qui améliorent le bonheur félin, la surveillance de la santé et l'enrichissement tout en ravissant leurs compagnons humains avec des informations précieuses.",
+    "purposeTitle": "Notre Purr-pose",
+    "purposeText": "Chez OctoCAT Supply, nous croyons que les chats méritent les mêmes innovations technologiques dont jouissent les humains. Notre équipe de spécialistes du comportement félin, d'ingénieurs et d'experts en IA travaille ensemble pour créer des produits qui comprennent, répondent et améliorent la vie quotidienne de votre chat.",
+    "featuresTitle": "Caractéristiques clés de nos produits",
+    "feature1": "Analyse comportementale et personnalisation alimentées par l'IA",
+    "feature2": "Surveillance de la santé en temps réel et alertes de bien-être",
+    "feature3": "Compatibilité multi-chats",
+    "feature4": "Intégration smartphone avec analyses détaillées",
+    "feature5": "Matériaux éco-responsables et économes en énergie",
+    "feature6": "Designs élégants et modernes qui s'harmonisent avec votre intérieur",
+    "quote": "\"Nos chats ont testé chaque produit de notre catalogue de manière approfondie. Seuls ceux qu'ils n'ont pas pu s'arrêter d'utiliser sont passés en production.\" — Felix Whiskerton, Fondateur"
+  },
+  "products": {
+    "title": "Produits",
+    "searchPlaceholder": "Rechercher des produits...",
+    "loading": "Chargement...",
+    "error": "Échec du chargement des produits",
+    "off": "DE RÉDUCTION",
+    "addToCart": "Ajouter au panier"
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "error": "Échec de la connexion. Veuillez réessayer."
+  },
+  "footer": {
+    "aboutTitle": "À propos",
+    "aboutText": "OctoCAT Supply est le principal fournisseur de produits intelligents alimentés par l'IA pour vos compagnons félins. Notre technologie innovante améliore le bien-être de votre chat grâce à une surveillance intelligente, un divertissement interactif et des solutions de confort personnalisées.",
+    "accountTitle": "Compte",
+    "myCart": "Mon panier",
+    "checkout": "Paiement",
+    "shoppingDetails": "Détails d'achat",
+    "order": "Commande",
+    "helpCenter": "Centre d'aide",
+    "helpfulLinks": "Liens utiles",
+    "services": "Services",
+    "supports": "Support",
+    "feedback": "Commentaires",
+    "terms": "Conditions générales",
+    "privacy": "Politique de confidentialité",
+    "socialMedia": "Réseaux sociaux",
+    "copyright": "Copyright © 2025 OctoCAT Supply. Tous droits réservés"
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre panier est vide",
+    "continueShopping": "Continuer vos achats",
+    "total": "Total",
+    "checkout": "Passer à la caisse",
+    "remove": "Supprimer"
+  },
+  "language": {
+    "select": "Langue",
+    "english": "English",
+    "french": "Français"
+  }
+}

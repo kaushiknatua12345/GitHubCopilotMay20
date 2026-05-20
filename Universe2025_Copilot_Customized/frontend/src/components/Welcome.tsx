@@ -1,12 +1,14 @@
 import Slider from 'react-slick';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
 
 export default function Welcome() {
   const sliderRef = useRef<Slider | null>(null);
   const { darkMode } = useTheme();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const sliderSettings = {
     dots: true,
@@ -56,19 +58,19 @@ export default function Welcome() {
           <div className="absolute inset-0 flex items-start pt-16 justify-end max-w-7xl mx-auto px-10 sm:px-12 lg:px-14 mr-[-1rem]">
             <div className={`max-w-2xl ${darkMode ? 'bg-dark/60' : 'bg-white/60'} backdrop-blur-sm p-8 rounded-xl shadow-[0_0_25px_rgba(118,184,82,0.5)] transition-colors duration-300`}>
               <div className={`${darkMode ? 'bg-primary/20' : 'bg-primary/30'} inline-block px-4 py-2 rounded-full mb-4 border border-primary/40`}>
-                <span className="text-primary-700 dark:text-primary-300 font-semibold">Powered by Advanced AI</span>
+                <span className="text-primary-700 dark:text-primary-300 font-semibold">{t('hero.badge')}</span>
               </div>
               <h1 className={`text-5xl font-bold mb-6 leading-tight ${darkMode ? 'text-white' : 'text-gray-800'} transition-colors duration-300`}>
-                Smart Cat Tech.<br />Purrsonalized.
+                {t('hero.title1')}<br />{t('hero.title2')}
               </h1>
               <p className={`${darkMode ? 'text-gray-200' : 'text-gray-700'} mb-8 text-lg transition-colors duration-300`}>
-                OctoCAT Supply brings cutting-edge AI technology to enhance your cat's life. Our premium smart products learn from your feline friend's behavior to provide personalized experiences, health insights, and next-level entertainment.
+                {t('hero.description')}
               </p>
               <button 
                 onClick={() => navigate('/products')} 
                 className="bg-primary hover:bg-accent text-white px-8 py-3 rounded-md font-medium transition-colors cursor-pointer"
               >
-                Explore Products
+                {t('hero.exploreProducts')}
               </button>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function Welcome() {
           <div className="flex flex-wrap items-center">
             {/* Section Title - Takes 20% width on larger screens */}
             <div className="w-full md:w-1/5 mb-8 md:mb-0">
-              <h2 className={`text-3xl font-bold text-left transition-colors duration-300`}>Trusted By Cat Lovers Everywhere</h2>
+              <h2 className={`text-3xl font-bold text-left transition-colors duration-300`}>{t('hero.trustedBy')}</h2>
             </div>
             
             {/* Carousel - Takes 80% width on larger screens */}

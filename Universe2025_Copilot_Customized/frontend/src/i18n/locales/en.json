@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
+    "admin": "Admin",
+    "manageProducts": "Manage Products",
+    "login": "Login",
+    "logout": "Logout",
+    "welcome": "Welcome!",
+    "cart": "Shopping cart"
+  },
+  "hero": {
+    "badge": "Powered by Advanced AI",
+    "title1": "Smart Cat Tech.",
+    "title2": "Purrsonalized.",
+    "description": "OctoCAT Supply brings cutting-edge AI technology to enhance your cat's life. Our premium smart products learn from your feline friend's behavior to provide personalized experiences, health insights, and next-level entertainment.",
+    "exploreProducts": "Explore Products",
+    "trustedBy": "Trusted By Cat Lovers Everywhere"
+  },
+  "about": {
+    "title": "About OctoCAT Supply",
+    "intro": "Welcome to OctoCAT Supply, your premier destination for AI-powered smart products designed specifically for your feline companions. Our cutting-edge cat tech innovations bring together the latest in artificial intelligence, sensor technology, and pet-friendly design to enhance the bond between you and your cat.",
+    "missionTitle": "Our Meow-ssion",
+    "missionText": "To revolutionize the way cats and humans interact through thoughtfully designed, AI-enhanced products that improve feline happiness, health monitoring, and enrichment while delighting their human companions with valuable insights.",
+    "purposeTitle": "Our Purr-pose",
+    "purposeText": "At OctoCAT Supply, we believe that cats deserve the same technological innovations that humans enjoy. Our team of feline behavior specialists, engineers, and AI experts work together to create products that understand, respond to, and improve your cat's daily life.",
+    "featuresTitle": "Key Features of Our Products",
+    "feature1": "AI-powered behavior analysis and personalization",
+    "feature2": "Real-time health monitoring and wellness alerts",
+    "feature3": "Multi-cat household compatibility",
+    "feature4": "Smartphone integration with detailed analytics",
+    "feature5": "Energy-efficient and eco-friendly materials",
+    "feature6": "Sleek, modern designs that complement your home",
+    "quote": "\"Our cats tested every product in our catalog extensively. Only the ones they couldn't stop using made it to production.\" — Felix Whiskerton, Founder"
+  },
+  "products": {
+    "title": "Products",
+    "searchPlaceholder": "Search products...",
+    "loading": "Loading...",
+    "error": "Failed to fetch products",
+    "off": "OFF",
+    "addToCart": "Add to Cart"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Login",
+    "error": "Login failed. Please try again."
+  },
+  "footer": {
+    "aboutTitle": "About",
+    "aboutText": "OctoCAT Supply is the leading provider of AI-powered smart products for your feline companions. Our innovative technology enhances your cat's wellbeing through intelligent monitoring, interactive entertainment, and personalized comfort solutions.",
+    "accountTitle": "Account",
+    "myCart": "My Cart",
+    "checkout": "Checkout",
+    "shoppingDetails": "Shopping Details",
+    "order": "Order",
+    "helpCenter": "Help Center",
+    "helpfulLinks": "Helpful Links",
+    "services": "Services",
+    "supports": "Supports",
+    "feedback": "Feedback",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "socialMedia": "Social Media",
+    "copyright": "Copyright © 2025 OctoCAT Supply. All Rights Reserved"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove"
+  },
+  "language": {
+    "select": "Language",
+    "english": "English",
+    "french": "Français"
+  }
+}

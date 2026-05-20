@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 
@@ -11,6 +12,7 @@ export default function Login() {
   const { login } = useAuth();
   const { darkMode } = useTheme();
   const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const errorMsg = searchParams.get('error');
@@ -25,14 +27,14 @@ export default function Login() {
       await login(email, password);
       navigate('/');
     } catch {
-      setError('Login failed. Please try again.');
+      setError(t('login.error'));
     }
   };
 
   return (
     <div className={`min-h-screen pt-20 ${darkMode ? 'bg-dark' : 'bg-gray-100'} flex items-center justify-center px-4 transition-colors duration-300`}>
       <div className={`max-w-md w-full ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-8 transition-colors duration-300`}>
-        <h2 className={`text-3xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-6 transition-colors duration-300`}>Login</h2>
+        <h2 className={`text-3xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-6 transition-colors duration-300`}>{t('login.title')}</h2>
         
         {error && (
           <div 
@@ -43,7 +45,7 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className={`block ${darkMode ? 'text-light' : 'text-gray-700'} mb-2 transition-colors duration-300`}>Email Address</label>
+            <label htmlFor="email" className={`block ${darkMode ? 'text-light' : 'text-gray-700'} mb-2 transition-colors duration-300`}>{t('login.email')}</label>
             <input
               id="email"
               type="email"
@@ -56,7 +58,7 @@ export default function Login() {
           </div>
 
           <div>
-            <label htmlFor="password" className={`block ${darkMode ? 'text-light' : 'text-gray-700'} mb-2 transition-colors duration-300`}>Password</label>
+            <label htmlFor="password" className={`block ${darkMode ? 'text-light' : 'text-gray-700'} mb-2 transition-colors duration-300`}>{t('login.password')}</label>
             <input
               id="password"
               type="password"
@@ -71,7 +73,7 @@ export default function Login() {
             type="submit"
             className="w-full bg-primary hover:bg-accent text-white py-2 px-4 rounded transition-colors"
           >
-            Login
+            {t('login.submit')}
           </button>
         </form>
       </div>

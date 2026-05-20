@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { api } from '../../../api/config';
@@ -30,6 +30,42 @@ export default function Products() {
   const { data: products, isLoading, error } = useQuery('products', fetchProducts);
   const { darkMode } = useTheme();
   const { addToCart } = useCart();
+  const productModalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!showModal || !selectedProduct) return;
+    const modalElement = productModalRef.current;
+    if (!modalElement) return;
+
+    const focusableSelectors = 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = modalElement.querySelectorAll<HTMLElement>(focusableSelectors);
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    firstFocusable?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setShowModal(false);
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    modalElement.addEventListener('keydown', handleKeyDown);
+    return () => modalElement.removeEventListener('keydown', handleKeyDown);
+  }, [showModal, selectedProduct]);
 
   const filteredProducts = products?.filter(product => 
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -201,6 +237,10 @@ export default function Products() {
       {showModal && selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50" onClick={() => setShowModal(false)}>
           <div 
+            ref={productModalRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="product-detail-title"
             className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl transition-colors duration-300`}
             onClick={e => e.stopPropagation()}
           >
@@ -221,7 +261,7 @@ export default function Products() {
                 className="w-full h-auto object-contain max-h-[400px]"
               />
             </div>
-            <h2 className={`text-2xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-4 transition-colors duration-300`}>
+            <h2 id="product-detail-title" className={`text-2xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-4 transition-colors duration-300`}>
               {selectedProduct.name}
             </h2>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} text-lg transition-colors duration-300`}>

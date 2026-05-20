@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { api } from '../../../api/config';
 import { useTheme } from '../../../context/ThemeContext';
@@ -29,6 +29,7 @@ interface ProductFormProps {
 
 export default function ProductForm({ product, suppliers, onClose, onSave }: ProductFormProps) {
   const { darkMode } = useTheme();
+  const modalRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState<Partial<Product>>(
     product || {
       name: '',
@@ -40,6 +41,40 @@ export default function ProductForm({ product, suppliers, onClose, onSave }: Pro
       imgName: ''
     }
   );
+
+  useEffect(() => {
+    const modalElement = modalRef.current;
+    if (!modalElement) return;
+
+    const focusableSelectors = 'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = modalElement.querySelectorAll<HTMLElement>(focusableSelectors);
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    firstFocusable?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    modalElement.addEventListener('keydown', handleKeyDown);
+    return () => modalElement.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,8 +93,14 @@ export default function ProductForm({ product, suppliers, onClose, onSave }: Pro
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 w-full max-w-md shadow-xl transition-colors duration-300`}>
-        <h2 className={`text-2xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-4 transition-colors duration-300`}>
+      <div
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="product-form-title"
+        className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 w-full max-w-md shadow-xl transition-colors duration-300`}
+      >
+        <h2 id="product-form-title" className={`text-2xl font-bold ${darkMode ? 'text-light' : 'text-gray-800'} mb-4 transition-colors duration-300`}>
           {product ? 'Edit Product' : 'Add New Product'}
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
